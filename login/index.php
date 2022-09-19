@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <style>
       #editdiv{
@@ -22,10 +24,34 @@
         position: absolute;
         right:0;
       }
+
+      #messagebox{
+   
+      }
       </style>
   </head>
   
   <body>
+    <div id="messagebox">
+      <?php
+      if(isset($_GET['msg']))
+      {
+        ?>
+        <script>
+          setTimeout(() => {
+        document.getElementById('messagebox');
+        window.location.href="index.php";
+      }, 2000);
+      </script>
+      <?php
+      $message=$_GET['msg'];
+    
+      echo "<div class='alert alert-success'>$message</div>";
+      }
+      ?>
+      
+    </div>
+
     <div id="editdiv">
 <button class=" btn btn-secondary" id="close-btn">X</button>
     <h3 class="text-center">Edit Todo Task</h3>
@@ -44,7 +70,7 @@
             <input type="text" name="todo" placeholder="Please enter The todo" class="form-control" required>
          </div>
 
-            <button type="submit" class="btn btn-primary mt-2">Add todo</button>
+            <button type="submit" id="addbtn" class="btn btn-primary mt-2">Add todo</button>
         </form>
         <table class="table mt-4">
 
@@ -89,8 +115,10 @@
    {
           document.getElementById("editdiv").style.display="none";
    }
-    </script>
 
+
+  
+    </script>
 
 
 
