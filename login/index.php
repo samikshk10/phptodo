@@ -66,7 +66,7 @@
     <td ><?php echo $row['id']?></td>
       <td ><?php echo $row['task'] ?></td>
       <td><button class="btn btn-danger" onclick="return confirm('Are you Sure you want to Delete?')";><?php echo ("<a href='delete.php?id=$row[id]'><i class='fa fa-trash fa-lg' style='color:white'></i></a>");?></button></td>    
-            <td><button class="btn btn-success" id="editbtn" onclick="validate('<?php echo $row['id']?>','<?php echo $row['task'] ?>')" ><i class="fa fa-edit fa-lg" style="color:white"></i></button></td> 
+            <td><button class="btn btn-success" id="editbtn" onclick="editt('<?php echo $row['id']?>','<?php echo $row['task'] ?>')" ><i class="fa fa-edit fa-lg" style="color:white"></i></button></td> 
     </tr>
     <?php
     }
@@ -76,7 +76,7 @@
     <script>
       var n;
       var a,str;
-   function validate(a,str){
+   function editt(a,str){
      document.getElementById('editdiv').style.display="block";
   //  console.log(a);
    
