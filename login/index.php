@@ -78,6 +78,7 @@
       var a,str;
    function validate(a,str){
      document.getElementById('editdiv').style.display="block";
+  //  console.log(a);
    
     document.getElementById('id1').value=a;
     document.getElementById('task1').value=str;
