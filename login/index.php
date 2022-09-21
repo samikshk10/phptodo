@@ -25,9 +25,7 @@
         right:0;
       }
 
-      #messagebox{
-   
-      }
+     
       </style>
   </head>
   
