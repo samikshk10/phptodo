@@ -68,7 +68,7 @@
 ?>
   if(document.getElementById('check').checked==true)
 {
-document.getElementById('ema').value=<?php echo $_COOKIE['email'] ?>;
+document.getElementById('ema').value=<?php echo $_GET['email'] ?>;
               
 }
 

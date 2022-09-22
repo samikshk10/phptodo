@@ -11,7 +11,7 @@ if($email===$dbemail && $pass===$dbpw)
 
     $_SESSION['emal']=$email;
     //5 sec time hold ;  / -> whole application
-    header ('location: login.php');
+    header ('location: login.php?email='.$email);
 }
 else{
     header('location: login.php');
