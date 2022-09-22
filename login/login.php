@@ -1,25 +1,33 @@
 <?php
-session_start();
-if(isset($_SESSION['msg']))
-{
-    $_SESSION['msg']=null;
-}
-$loggedin=isset($_SESSION['msg']);
-    if(!$loggedin)
-    {
-       
-    }
+// session_start();
+
+// $loggedin=isset($_SESSION['msg']);
+//     if(!$loggedin)
+//     {
+
+//      }
+//     else{
+//         echo "success";
+//     }
+///cookie -->behavior track
+
+//COOKIES
+
+ $loggedin=isset($_COOKIE['email']);
+     if(!$loggedin)
+     {
+            echo "error";
+     }
     else{
         echo "success";
     }
-
-   
-
-
-
-
+///cookie -->behavior track
 
 ?>
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +48,7 @@ $loggedin=isset($_SESSION['msg']);
 
 
     <h1 class="text-center">Login Page</h1>
-    <form action="welcome.php" method="post">
+    <form action="cookies.php" method="post">
 
             Email:<input type="text" name="email" class="form-control" ><br>
             Password:<input type="password" name="pw" class="form-control">
