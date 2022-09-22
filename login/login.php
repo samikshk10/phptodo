@@ -48,11 +48,32 @@
 
 
     <h1 class="text-center">Login Page</h1>
-    <form action="cookies.php" method="post">
+    <form action="cookies.php" method="post" name="form1">
 
-            Email:<input type="text" name="email" class="form-control" ><br>
+            Email:<input type="text" name="email" class="form-control" id="ema" ><br>
             Password:<input type="password" name="pw" class="form-control">
+            <input type="checkbox" id="check" value="remember"> Remember Me
           <button type="submit" name="sub" >Submit</button>
     </form>
+
+    <script>
+      
+    <?php
+    $loggedin=isset($_COOKIE['email']);
+    if(!$loggedin)
+    {
+           echo "error";
+    }
+   else{
+?>
+  if(document.getElementById('check').checked==true)
+{
+document.getElementById('ema').value=<?php echo $_COOKIE['email'] ?>;
+              
+}
+
+<?php }
+?>
+        </script>
 </body>
 </html>
